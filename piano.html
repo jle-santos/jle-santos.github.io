@@ -56,20 +56,49 @@ li a:hover {
 <table style="float:left; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#fff; border:1px solid #999; line-height:1.5; color:#000; font-size:smaller;"><tr>
     <th colspan="2" style="background:#ddd; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;">type name here</th></tr>
     <tr style="border-bottom:1px solid #999;"><th colspan="2" style="padding:0;">
-        <a target="_blank" href="img_mountains.jpg">
-            <img src="/Images/Piano/piano.jpg" alt="PSU" width="400" height="200">
+        <a target="_blank" href="">
+            <img src="/Images/Piano/piano.jpg" alt="PSU" width="400" height="133">
         </a></th></tr>
     <tr>
-    <td style="padding:4px;"><b>Artist</b></td>
-    <td style="padding:4px;">type here</td>
+    <td style="padding:4px;"><b>Date</b></td>
+    <td style="padding:4px;">January 2019 - March 2019</td>
     </tr>
+
+    <tr>
+        <td style="padding:4px;"><b>Language</b></td>
+        <td style="padding:4px;">SystemVerilog</td>
+    </tr>
+
+    <tr>
+        <td style="padding:4px;"><b>Board</b></td>
+        <td style="padding:4px;">DE0 Nano SoC Cyclone V</td>
+    </tr>
+
+    <tr>
+        <td style="padding:4px;"><b>Program</b></td>
+        <td style="padding:4px;">Quartus Prime Lite 18.0, ModelSim</td>
     </tr>
 </table>
 
 
-<p>Digital piano that plays 13 notes using Altera's Cyclone V FPGA. </p>
+<p>Piano++ is a 13-key digital piano that was created using the DE0-Nano-SoC board. It was 
+    programmed using exclusively SystemVerilog as the programming language and was 
+    compiled and synthesized using Quartus Prime Lite 18.0. The piano was designed with the 
+    frequencies that produces the C major scale of an actual piano. </p>
 
+<p> It has the ability to play multiple tones at once and can be scaled using a button 
+    that increases the scale factor as high as 5 times the original frequency. The scale 
+    factor in use is displayed for the user’s knowledge onto the screen. Furthermore, the 
+    user will have the option to adjust the volume using a potentiometer.</p>
 
+<h3>Program Flow</h3>
+
+<p> The Quartus project is comprises of five modules which consists of the piano, tone, key, screen, and the scale module. 
+    The flowchart below shows the overview of the program flow in detail. 
+    Each of the modules are instantiated in the “Piano” module. It is also here 
+    where the modules communicate with each other.</p>
+
+<img src="/Images/Piano/piano_flow.png" alt="Flowchart" width="400" height="133">
 
 <style>
   div.gallery {

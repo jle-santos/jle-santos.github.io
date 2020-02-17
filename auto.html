@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-size: 28px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>jle-santos</h2>
+  <p>Electrical Engineering Student (4th Year)</p>
+</div>
+
+<ul>
+  <li><a href="index.html">HOME</a></li>
+  <li><a class="active" href="projects.html">PROJECTS</a></li>
+  <li><a href="https://github.com/jle-santos">GITHUB</a></li>
+</ul>
+
+<h3>Maze Robot</h3>
+
+<table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#fff; border:1px solid #999; line-height:1.5; color:#000; font-size:smaller;"><tr>
+    <th colspan="2" style="background:#ddd; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;">QR Code Reader</th></tr>
+    <tr style="border-bottom:1px solid #999;"><th colspan="2" style="padding:0;">
+        <a target="_blank" >
+            <img src="/Images/AutoCar/AutoCar.jpg" alt="robot" width="400" height="300">
+        </a></th></tr>
+    <tr>
+    <td style="padding:4px;"><b>Date</b></td>
+    <td style="padding:4px;">May 2019</td>
+    </tr>
+
+    <tr>
+        <td style="padding:4px;"><b>Language</b></td>
+        <td style="padding:4px;">C++</td>
+    </tr>
+
+    <tr>
+        <td style="padding:4px;"><b>Board</b></td>
+        <td style="padding:4px;">Raspberry Pi 3B+</td>
+    </tr>
+
+    <tr>
+        <td style="padding:4px;"><b>Program</b></td>
+        <td style="padding:4px;">Visual Studio 2017, SolidWorks, KiCAD</td>
+    </tr>
+
+    <tr>
+        <td style="padding:4px;"><b>Peripherals</b></td>
+        <td style="padding:4px;">Pi Camera, Ultrasonic Sensor, Motor Driver</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px;"><b>Github</b></td>
+      <td style="padding:4px;"><a href=https://github.com/jle-santos/Autonomous-Car>Maze Robot</a></td>
+  </tr>
+</table>
+
+<p> The maze robot is built to navigate through a maze by sensing coloured markers to turn.
+    Markers are placed at corners with blue indicating a right and red indicating a left.  
+</p>
+
+<img src="/Images/AutoCar/maze.jpg" alt="guides" width="720" height="540">
+
+<h3>Overview</h3>
+
+<p> The algorithm is written in C++ on the Raspberry Pi. First, it thresholds the image to
+    isolate only the desired colours, red or blue. Afterwards, it fits a circle on the colours
+    to see if they are a valid marker and not noise. After it detects the colour, it waits for the
+    ultrasonic sensor to report that the robot is 7 cm from the wall. From there, it will stop
+    and turn appropriately. 
+</p>
+
+<h4>Motor Control</h4>
+<p> The motors are controlled via an H-Bridge motor controller. It allows for control 
+    of two motors independently with speed capabilities. 
+</p>
+
+<h4>PCB</h4>
+<p> The PCB is designed in KiCAD and sent to AllPCB to be manufactured for the project. 
+</p>
+
+<h4>Chassis</h4>
+<p> The chassis is 3D printed and designed in SolidWorks. </p>
+
+<style>
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  </style>
+  </head>
+  <body>
+
+
+</body>
+</html>
